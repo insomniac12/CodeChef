@@ -1,0 +1,14 @@
+#include<stdio.h>
+ 
+int main(){
+int i,n;
+for(i=0;;i++)
+{
+scanf("%d",&n);
+if(n!=42)
+printf("%d\n",n);
+else
+exit(0);
+}
+return 0;
+}
