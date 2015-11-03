@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+int x;
+float y,z;
+scanf("%d",&x);
+scanf("%f",&y);
+if(x%5==0&&x<y-.5)
+{
+z=y-x-0.5;
+printf("%f",z);
+}
+else
+printf("%f",y);
+return 0;
+} 
