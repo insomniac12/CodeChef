@@ -1,0 +1,22 @@
+#include <stdio.h>
+ 
+int main(void) {
+	long n,i;
+	while(1)
+	{
+		scanf("%ld",&n);
+		long a[n+1];
+		for(i=1;i<=n;i++)
+		scanf("%ld",&a[i]);
+		if(n==0)
+		return 0;
+		for(i=1;i<=n;i++)
+			if(a[a[i]]!=i)
+			break;
+			if(i<=n)
+			printf("not ambiguous\n");
+			else
+			printf("ambiguous\n");
+	}	
+return 0;
+		} 
