@@ -1,0 +1,46 @@
+#include<stdio.h>
+void sort(int a[],int n1);
+int main()
+{
+int c,j,k,t,n;
+scanf("%d",&t);
+while(t--)
+{
+scanf("%d",&n);
+int wp[n],wr[n];
+for(j=0;j<n;j++)
+scanf("%d ",&wp[j]); 
+for(j=0;j<n;j++)
+scanf("%d ",&wr[j]);
+sort(wp,n);
+sort(wr,n);
+c=j=k=0;
+while(j<n &&k<n)
+{
+if(wp[j]<=wr[k])
+{
+c++;
+j++;
+}
+k++;
+} 
+printf("%d\n",c);
+}
+return 0;
+}
+void sort(int a[],int n1)
+{
+int i,j,temp;
+for(i=0;i<n1;i++)
+{
+for(j=i;j<n1;j++)
+{
+if(a[i]>a[j])
+{
+temp=a[i];
+a[i]=a[j];
+a[j]=temp;
+}
+}
+}
+}
