@@ -1,0 +1,29 @@
+#include <stdio.h>
+int gcd(int n, int m);
+int main(void) 
+{
+int t,n,i,y;
+scanf("%d",&t);
+while(t--)
+{
+scanf("%d",&n);
+int a[n];
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+y=a[0];
+for(i=1;i<n;i++)
+{
+if(y<a[i])
+y=gcd(a[i],y);
+else
+y=gcd(y,a[i]);
+}
+printf("%d\n",y);
+}
+	return 0;
+}
+int gcd(int n,int m)
+{
+return m==0?n:gcd(m,n%m);
+}
+ 
