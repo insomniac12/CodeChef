@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<math.h>
+int main(void) 
+{
+int t,i,n,s;
+scanf("%d",&t);
+while(t--)
+{
+s=0;
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+if(pow(5,i)<=n)
+s+=n/pow(5,i);
+else
+break;
+}
+printf("%d\n",s);
+}
+	return 0;
+}
