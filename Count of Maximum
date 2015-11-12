@@ -1,0 +1,32 @@
+#include <stdio.h>
+#define MAX 10001
+int main() 
+{
+int t,n,i,r,c[MAX];
+scanf("%d",&t);
+while(t--)
+{
+int max=0;
+scanf("%d",&n);
+int a[n+1];
+for(i=1;i<MAX;i++)
+c[i]=0;
+for(i=1;i<=n;i++)
+{
+scanf("%d",&a[i]);
+c[a[i]]++;
+}
+for(i=1;i<=n;i++)
+{
+if(c[a[i]]>max)
+{
+max=c[a[i]];
+r=a[i];
+}
+else if(max==c[a[i]] && r>a[i])
+r=a[i];
+}
+printf("%d %d\n",r,max);
+}
+	return 0;
+} 
