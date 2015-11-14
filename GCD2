@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include<string.h>
+long long int gcd(int x,int y);
+long long int find(long long int a,char s[]);
+int main() 
+{
+int t;
+long long int a,g;
+char s[251];
+scanf("%d",&t);
+while(t--)
+{
+scanf("%lld",&a);
+scanf("%s",s);
+if(a==0)
+printf("%s\n",s);
+else
+{
+g=gcd(a,find(a,s));
+printf("%lld\n",g);
+}
+}
+	return 0;
+}
+long long int find(long long int a,char s[])
+{
+long long int m=0,l,i;
+l=strlen(s);
+for(i=0;i<l;i++)
+{
+m*=10;
+m+=s[i]-48;
+m=m%a;
+}
+return m;
+}
+long long int gcd(int x,int y)
+{
+if(y==0)
+return x;
+else
+return (gcd(y,x%y));
+}
