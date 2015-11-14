@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+long long int a[100000000]={0};
+long long int sum(long long int n);
+long long int sum(long long int n)
+{
+long long int r;
+if(n<=11)
+return n;
+else if(n>=12 && n<=100000000)
+{
+if(a[n]!=0)
+return a[n];
+else 
+{
+r=sum(n/2)+sum(n/3)+sum(n/4);
+a[n]=max(r,n);
+return a[n];
+}
+}
+else
+{
+r=sum(n/2)+sum(n/3)+sum(n/4);
+return (max(r,n));
+}
+}
+int main() 
+{
+long long int n,y;
+while(scanf("%lld",&n)!=EOF)
+{
+y=sum(n);
+printf("%lld\n",y);
+}
+	return 0;
+} 
