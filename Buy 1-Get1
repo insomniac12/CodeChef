@@ -1,0 +1,28 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main() 
+{
+int t,i;
+char a[201];
+cin>>t;
+while(t--)
+{
+int cost=0,f[300]={0};
+cin>>a;
+for(i=0;a[i]!='\0';i++)
+{
+f[a[i]]++;
+}
+for(i=0;i<300;i++)
+{
+if(f[i]%2==0)
+cost+=f[i]/2;
+else
+cost+=f[i]/2+1;
+}
+cout<<cost;
+cout<<"\n";
+}
+return 0;
+} 
