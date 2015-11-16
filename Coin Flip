@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+int t,n,i,q,g;
+cin>>t;
+while(t--)
+{
+cin>>g;
+while(g--)
+{
+cin>>i>>n>>q;
+if(n%2==0 || i==q)
+cout<<n/2;
+else
+cout<<n/2+1;
+cout<<"\n";
+}
+}
+	return 0;
+} 
