@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int n;
+while(scanf("%d",&n)!=EOF)
+{
+if(n==0)
+break;
+int l[n],i,k=0,c=0,j;
+for(i=0;i<n;i++)
+scanf("%d",&l[i]);
+sort(l,l+n);
+for(i=n-1;i>1;i--)
+{
+j=0;
+k=i-1;
+while(j<k)
+{
+if(l[j]+l[k]<l[i])
+{
+c+=(k-j);
+j++;
+}
+else
+k--;
+}
+}
+printf("%d\n",c);
+}
+	return 0;
+} 
