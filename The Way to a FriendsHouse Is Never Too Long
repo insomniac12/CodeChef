@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int t;
+scanf("%d",&t);
+while(t--)
+{
+int n;
+double d=0.0;
+scanf("%d",&n);
+pair<int,int>p[n];
+int i,a,b;
+for(i=0;i<n;i++)
+{
+scanf("%d%d",&a,&b);
+p[i]={a,10000-b};
+}
+sort(p,p+n);
+for(i=1;i<n;i++)
+{
+d+=sqrt((p[i].first-p[i-1].first)*(p[i].first-p[i-1].first)+(((10000-p[i].second)-(10000-p[i-1].second))*((10000-p[i].second)-(10000-p[i-1].second))));
+}
+printf("%.2lf\n",d);
+}
+return 0;
+} 
