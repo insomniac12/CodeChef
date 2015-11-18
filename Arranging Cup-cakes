@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int  t;
+cin>>t;
+while(t--)
+{
+int i,n,l=0,b=0,res=0;
+cin>>n;
+for(i=2;i<=sqrt(n);i++)
+{
+if(n%i==0)
+{
+l=i;
+b=n/i;
+}
+}
+if(l==0 && b==0)
+{l=n;
+b=1;
+}
+res=abs(l-b);
+cout<<res<<endl;
+}
+ 
+	return 0;
+} 
