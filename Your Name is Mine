@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+long long int n,m,q;
+cin>>n>>m;
+long long int l,r,ans;
+while(m--)
+{
+cin>>q;
+l=max(q-n,n+1);
+r=min(q-1,2*n);
+if(l>r)
+ans=0;
+else
+ans=r-l+1;
+cout<<ans<<endl;
+}
+	return 0;
+} 
