@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+#include<stdio.h>
+int main() 
+{
+int t,n;
+scanf("%d",&t);
+while(t--)
+{
+scanf("%d",&n);
+int a[n],i,m=1000001,ans=-1;
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+for(i=0;i<n;i++)
+{
+m=min(a[i],m);
+ans=max(ans,a[i]-m);
+}
+if(ans>0)
+printf("%d\n",ans);
+else
+printf("UNFIT\n");
+}
+	return 0;
+} 
