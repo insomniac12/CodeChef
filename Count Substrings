@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int t;
+cin>>t;
+long long int n;
+while(t--)
+{
+cin>>n;
+char s[n];
+long long int i,c=0;
+cin>>s;
+for(i=0;i<n;i++)
+{
+if(s[i]=='1')
+c++;
+}
+cout<<(c*(c+1))/2<<endl;
+}
+	return 0;
+} 
