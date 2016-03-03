@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int t;
+cin>>t;
+while(t--)
+{
+int k,q,r=0,d=0,i;
+cin>>k;
+q=103993%33102;
+r=103993%33102;
+if(k==0)
+cout<<3<<endl;
+else
+{
+cout<<3<<'.';
+while(k--)
+{
+q=(r*10)/33102;
+r=(r*10)%33102;
+cout<<q;
+}
+}
+cout<<endl;
+}
+	return 0;
+} 
