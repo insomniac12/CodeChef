@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int n;
+cin>>n;
+int a[n],c,i,j,m=0;
+for(i=0;i<n;i++)
+cin>>a[i];
+for(i=0;i<n;i++)
+{
+c=0;
+if(a[i]!=0)
+{
+for(j=i;j<n;j++)
+{
+if(a[j]!=0)
+c++;
+else
+break;
+}
+}
+m=max(m,c);
+}
+cout<<m<<endl;
+	return 0;
+} 
