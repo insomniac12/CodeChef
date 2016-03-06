@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int t;
+cin>>t;
+while(t--)
+{
+long long int n,m,i;
+cin>>n>>m;
+long long int a[n],j,mi=100001,M=-1,pos[m];
+for(j=0;j<m;j++)
+{
+cin>>pos[j];
+mi=min(mi,pos[j]);
+M=max(M,pos[j]);
+}
+for(i=0;i<n;i++)
+{
+a[i]=max(abs(i-mi),abs(i-M));
+}
+for(i=0;i<n;i++)
+cout<<a[i]<<" ";
+cout<<endl;
+}
+	return 0;
+} 
