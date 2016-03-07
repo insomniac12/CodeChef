@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int t;
+cin>>t;
+while(t--)
+{
+int ds,dt,d;
+cin>>ds>>dt>>d;
+int dmin=0;
+if(ds+dt<d)
+dmin=d-ds-dt;
+else if(ds>=d+dt)
+dmin=ds-dt-d;
+else if(dt>=d+ds)
+dmin=dt-d-ds;
+else
+dmin=0;
+cout<<dmin<<endl;
+}
+ 
+	return 0;
+} 
