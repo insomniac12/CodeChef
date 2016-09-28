@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() {
+int t;
+cin>>t;
+while(t--)
+{
+string s;
+cin>>s;
+long long int i,l,c=1,nodes,prenodes,sum=0;
+l=s.length();
+for(i=0;i<l;i++)
+{
+if(s[i]=='l' || s[i]=='r')
+c++;
+else
+c--;
+}
+nodes=pow(2,c)-1;
+prenodes=pow(2,c-1)-1;
+ 
+sum=((nodes*(nodes+1))/2)-((prenodes*(prenodes+1))/2);
+cout<<sum<<endl;
+}
+	return 0;
+} 
